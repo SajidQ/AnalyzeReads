@@ -1,0 +1,28 @@
+{
+  "name": "AnalyzeReads",
+  "homepage": "https://github.com/SajidQ/AnalyzeReads",
+  "authors": [
+    "Qandeel Sajid <sajid.qandeel@gmail.com>"
+  ],
+  "description": "Tool that analyzes books read on Goodreads",
+  "main": "index.html",
+  "keywords": [
+    "goodreads",
+    "javascript",
+    "jqury",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "oauth-1.0a": "^1.0.1"
+  }
+}
