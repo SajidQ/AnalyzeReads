@@ -1,39 +1,30 @@
-<html>
+<!doctype html>
+<html ng-app="chartedReadsApp">
 
 <head>
+    <meta charset="utf-8">
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script>
-        var saved = '';
-        $(document).ready(function() {
-                $.ajax({
-                    type: 'GET',
-                    dataType: 'jsonp',
-                    contentType: "application/json; charset=utf-8",
-                    data:"{}",
-                    url: "http://analyzereadsserverphp-env.us-west-2.elasticbeanstalk.com/?func=setupOauth&callback=?", // The server URL
-                    error: function (jqXHR, textStatus, errorThrown) {
-                        console.log(jqXHR, textStatus, errorThrown)
-                    },
-                    success: function (msg) {
-                        console.log(msg["data"]);
-                        saved = msg["data"];
-                    }
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="indexScript.js"></script>
+    <script type="text/javascript" src="mainController.js"></script>
 
-                });
-        })
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fruktur|Raleway:400,800" rel="stylesheet">
 
-
-
-
-    </script>
-
+    <base href="/">
 </head>
 
-<body>
+<body ng-controller="mainController">
 
-JSON Test Page.
-<div id="value"></div>
+    <div id="wrapper">
+        <div id="content">
+                <div ng-view></div>
+        </div>
+    </div>
 </body>
 
 </html>

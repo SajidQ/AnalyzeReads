@@ -1,0 +1,19 @@
+<script>
+    $.ajax({
+        type: 'GET',
+        dataType: 'jsonp',
+        contentType: "application/json; charset=utf-8",
+        data:"{}",
+        url: "http://analyzereadsserverphp-env.us-west-2.elasticbeanstalk.com/?func=getAccessToken&callback=?", // The server URL
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown)
+        },
+        success: function (msg) {
+            console.log(msg["data"]);
+            var saved = msg["data"];
+            //window.location.href = saved;
+            alert(saved);
+        }
+
+    });
+</script>
